@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    header {
+      padding: 20px 10%;
+      background: #000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    nav a {
+      color: #aaa;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    .signin-btn {
+      background-color: #4c3cd5;
+      color: #fff;
+      padding: 5px 20px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+   nav .signin-btn:hover{
+    background-color:  #6b5de8;
+
+   }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                  url('https://images.unsplash.com/photo-1542281286-9e0a16bb7366') center/cover no-repeat;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 0 10%;
+    }
+
+  
+    .hero-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    .left-content {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .left-content h1 {
+      font-size: 5rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+
+    .search-box {
+      position: relative;
+      width: 320px;
+      margin-bottom: 2rem;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 12px 20px;
+      border-radius: 30px;
+      border: none;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    .hero-buttons a {
+      padding: 10px 20px;
+      border-radius: 25px;
+      margin-right: 15px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    .btnblue {
+      background-color: #00aaff;
+      color: white;
+    }
+
+    .btndark {
+      background-color: #1a1a1a;
+      color: white;
+      border: 1px solid #444;
+    }
+      .right-content {
+      flex: 1;
+      min-width: 300px;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .right-content h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .right-content p {
+      color: #aaa;
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    section.features {
+      padding: 10px 10%;
+      text-align: center;
+      background-color: #000;
+    }
+
+    .feature-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background-color: #222;
+      padding: 30px;
+      width: 250px;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card i {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #00aaff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #000;
+      color: #aaa;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        align-items: center;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+      }
+
+      .search input {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">✪ MyLanding</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#contact">Contact</a></li>
+         <button class="signin-btn">Sign In</button>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="left-content">
+        <h1>Welcome</h1>
+        <div class="search-box">
+          <input type="text" placeholder="Search..." />
+        </div>
+        <div class="hero-buttons">
+          <a href="#" class="btnblue">Free Trial</a>
+          <a href="#about" class="btndark">See More</a>
+        </div>
+      </div>
+      <div class="right-content">
+        <h2>Landing page.</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <h2>Our Features</h2>
+    <div class="feature-grid">
+      <div class="card">
+        <i class="fas fa-bolt"></i>
+        <h3>Fast</h3>
+        <p>Blazing fast load time for your users.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-mobile-alt"></i>
+        <h3>Responsive</h3>
+        <p>Works on all screen sizes and devices.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-lock"></i>
+        <h3>Secure</h3>
+        <p>Built with strong security in mind.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="features" id="contact">
+    <h2>Contact Us</h2>
+    <p>📧Email: hello@landing.com</p>
+    <p>📞Phone: +123 456 7890</p>
+  </section>
+
+  <footer>
+    &copy; 2025 MyLanding. All rights reserved.
+  </footer>
+  
+
+</body>
+</html>
+
+
+
